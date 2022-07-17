@@ -38,8 +38,8 @@ const CakeCarrousell = ({ cakes }) => {
         }}
       >
         {cakes.map((cake) => (
-          <SwiperSlide key={cake._id}>
-            <Cake key={cake._id} cake={cake} />
+          <SwiperSlide key={cake.id}>
+            <Cake key={cake.id} cake={cake} />
           </SwiperSlide>
         ))}
       </Swiper>

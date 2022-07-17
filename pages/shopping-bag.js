@@ -23,7 +23,7 @@ const ShoppingBag = ({ shoppingCart, updateAmountCart, deleteProduct }) => {
           {shoppingCart.length === 0
             ? "No products on your cart"
             : shoppingCart.map((product) => (
-                <div key={product._id} className={styles.product}>
+                <div key={product.id} className={styles.product}>
                   <div className={styles.image}>
                     <Image
                       layout="responsive"
@@ -46,7 +46,7 @@ const ShoppingBag = ({ shoppingCart, updateAmountCart, deleteProduct }) => {
                         onChange={(event) =>
                           updateAmountCart({
                             amount: event.target.value,
-                            id: product._id,
+                            id: product.id,
                           })
                         }
                       >
@@ -69,7 +69,7 @@ const ShoppingBag = ({ shoppingCart, updateAmountCart, deleteProduct }) => {
                   </div>
                   <button
                     className={styles.delete_button}
-                    onClick={() => deleteProduct(product._id)}
+                    onClick={() => deleteProduct(product.id)}
                   >
                     x
                   </button>

@@ -5,7 +5,7 @@ const CakesList = ({ cakes }) => {
   return (
     <div className={styles.cakeGrid}>
       {cakes.map((cake) => (
-        <Cake key={cake._id} cake={cake} />
+        <Cake key={cake.id} cake={cake} />
       ))}
     </div>
   );

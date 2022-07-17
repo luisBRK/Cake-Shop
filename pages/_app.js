@@ -18,10 +18,10 @@ function MyApp({ Component, pageProps }) {
   }, [shoppingCart]);
 
   const addToCart = (product) => {
-    if (shoppingCart.some((cakeProduct) => cakeProduct._id === product._id)) {
+    if (shoppingCart.some((cakeProduct) => cakeProduct.id === product.id)) {
       // Exists | update amount
       const updateCart = shoppingCart.map((cakeProduct) => {
-        if (cakeProduct._id === product._id) {
+        if (cakeProduct.id === product.id) {
           cakeProduct.amount = product.amount;
         }
 
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
 
   const updateAmountCart = (product) => {
     const updateCart = shoppingCart.map((cakeProduct) => {
-      if (cakeProduct._id === product._id) {
+      if (cakeProduct.id === product.id) {
         cakeProduct.amount = product.amount;
       }
 
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
 
   const deleteProduct = (id) => {
     const updateCart = shoppingCart.filter(
-      (cakeProduct) => cakeProduct._id !== id
+      (cakeProduct) => cakeProduct.id !== id
     );
     setShoppingCart(updateCart);
   };
