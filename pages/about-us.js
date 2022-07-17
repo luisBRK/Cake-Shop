@@ -33,7 +33,7 @@ const Aboutus = ({ entrys }) => {
 
           <div className={styles.team_members}>
             {entrys.map((teamMember) => (
-              <TeamMember key={teamMember.id} teamMember={teamMember} />
+              <TeamMember key={teamMember._id} teamMember={teamMember} />
             ))}
           </div>
         </div>

@@ -5,7 +5,7 @@ const BlogList = ({ entrys }) => {
   return (
     <div className={styles.blog}>
       {entrys.map((entry) => (
-        <Entry key={entry.id} entry={entry} />
+        <Entry key={entry._id} entry={entry} />
       ))}
     </div>
   );
