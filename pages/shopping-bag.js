@@ -87,7 +87,7 @@ const ShoppingBag = ({ shoppingCart, updateAmountCart, deleteProduct }) => {
               </p>
             </>
           ) : (
-            <p>You dont't select any product</p>
+            <p>You do not select any product</p>
           )}
         </div>
       </main>
