@@ -1,0 +1,122 @@
+/* :root {
+  --ligature-font: 'Dancing Script', cursive;
+} */
+
+/* header container */
+.header {
+  /* background-image: linear-gradient(to right, rgb(79 177 195 /0.7),rgb(79 177 195/ 0.2) ), url(../public/img/background2.jpg); */
+  padding: 1rem 0;
+  background-size: cover;
+  background-position: 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .header {
+    /* height: 40rem; */
+  }
+}
+
+/* navegation */
+.navegation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .navegation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* logo */
+.logo {
+  font-family: var(--font-second);
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--red);
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    max-width: 40rem;
+    justify-content: space-between;
+  }
+}
+
+.navbar a {
+  position: relative;
+  font-weight: 500;
+  color: var(--black);
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--red);
+}
+
+.navbar a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--red);
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+
+.navbar a:hover:before {
+  width: 100%;
+}
+
+/* store and search */
+.store {
+  border-radius: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .store {
+    width: 8.4rem;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+}
+.store a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 5rem;
+  background-color: var(--red);
+  transition: 0.3s;
+}
+
+.store a:hover {
+  position: relative;
+  cursor: pointer;
+  background-color: var(--red-dark);
+  /* transform: scale(1.2); */
+}

@@ -1,0 +1,33 @@
+.error {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .error {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.error_text {
+  color: var(--red);
+  font-size: 4rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error_text a {
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: solid 3px var(--red);
+  color: var(--red);
+  font-weight: 500;
+}
+.error_text a:hover {
+  transform: scale(0.95);
+}

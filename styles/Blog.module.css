@@ -1,0 +1,26 @@
+.blog {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+@media (min-width: 480px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .blog {
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog {
+    row-gap: 6rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

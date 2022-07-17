@@ -1,0 +1,160 @@
+.content {
+  margin-top: 4rem;
+  display: grid;
+  gap: 10rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+}
+
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* product */
+.product {
+  position: relative;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border-bottom: solid 1px var(--blueGray);
+}
+
+@media (min-width: 768px) {
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+.product:last-of-type {
+  border-bottom: none;
+}
+
+.product_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.price_amount {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  gap: .5rem;
+}
+
+@media (min-width: 768px) {
+  .price_amount {
+    justify-content: flex-start;
+  }
+}
+
+.price {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .price {
+    flex: 1;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
+.price span {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+.select {
+  all: unset;
+  border: solid 1px var(--blueGray);
+  border-radius: 7px;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  width: 6rem;
+}
+
+@media (max-width:768px) {
+  .select {
+    flex: 1;
+  }
+}
+
+.subtotal {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+
+}
+
+@media(min-width: 768px) {
+  .subtotal {
+    text-align: left;
+  }
+}
+
+.delete_button {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border: none;
+  border-radius: 0 0 0 10px;
+  padding: 0 2rem;
+  background-color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--dark-gray);
+}
+
+@media (min-width: 768px) {
+  .delete_button {
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.delete_button:hover {
+  cursor: pointer;
+}
+
+
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  padding: 6rem 4rem;
+  background-color: var(--gray);
+}
+
+.summary_price {
+  font-size: 3rem;
+  font-weight: 600;
+}

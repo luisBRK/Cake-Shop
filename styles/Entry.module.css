@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+/* ALL THE ENTRY CARSS IN /BLOG */
+
+/* data info */
+.card_img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card_img img {
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+.card_img img:hover {
+  transform: scale(1.15);
+}
+
+.info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--third-font);
+}
+.card_date {
+  color: var(--red);
+}
+.card_resume {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+/* button */
+.card_link {
+  position: relative;
+  border-radius: 5px;
+  padding: 1rem 0;
+  font-weight: 700;
+  text-align: center;
+  color: var(--red);
+  z-index: 10;
+  transition: 0.3s;
+}
+.card_link:after {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--red);
+  transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  z-index: -10;
+}
+
+.card_link:hover:after {
+  width: 100%;
+}
+.card_link:hover {
+  color: var(--white);
+}
+
+/* PAGE ENTRY */
+.entry_body {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.entry_body_date {
+  font-family: var(--font-second);
+  font-weight: 700;
+  color: var(--red);
+}
+
+.entry_body_text {
+  white-space: pre-wrap;
+}

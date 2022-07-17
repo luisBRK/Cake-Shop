@@ -1,0 +1,11 @@
+/* images swipe */
+.carrousell {
+  max-width: 50rem;
+  width: 100%;
+}
+.carrousell img {
+  border-radius: 1rem;
+}
+.cake_carrousell{
+  margin-top: 4rem;
+}
